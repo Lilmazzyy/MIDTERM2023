@@ -32,4 +32,21 @@ public interface Employee {
 	//calculate bonuses
 	public int calculatebonuses(int bonuses);
 
+	//assignDepartment() will assign employee to departments
+	public void assignDepartment();
+
+	//calculate employee salary
+	public int calculateSalary();
+
+	//employee benefit
+	public void benefitLayout();
+
+	//set employee address
+	public void setAddress(String address);
+
+	//set employee phone number
+	public int employeePhoneNumber();
+
+	//set employee emailAddress
+	public String employeeEmailAddress();
 }
