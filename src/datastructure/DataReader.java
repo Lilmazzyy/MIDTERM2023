@@ -19,6 +19,28 @@ public class DataReader {
 		 */
 
 		String textFile = System.getProperty("user.dir") + "/src/data/self-driving-car.txt";
+		LinkedList<String> linkedList = new LinkedList<>();
+
+		try (BufferedReader reader = new BufferedReader(new FileReader(textFile))) {
+
+			String line;
+			while ((line = reader.readLine()) != null) {
+
+				String[] words = line.split("\\s+");
+
+
+				linkedList.addAll(Arrays.asList(words));
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
+
+		for (String wrd : linkedList) {
+			System.out.print(wrd + " ");
+
+
+		}
 
 
 

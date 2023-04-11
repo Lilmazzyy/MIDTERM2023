@@ -25,54 +25,19 @@ A.
 
 Explain the entire java life cycle.
 what is class?
-A class is a blueprint or template for creating objects in Java. It defines the attributes and methods that an object of that class will have.
-
 What is object?
-An object is an instance of a class that contains data and behavior. It is created using the "new" keyword and can be used to invoke the methods defined in the class.
-
 What is the entry point of an application?
-The entry point of a Java application is the "main" method.
-
 Why main is static?
-The "main" method is declared as static because it is invoked before any objects are created.
-
 Which class is the superclass of all classes?
-the Object class
-
 What is difference between path and classpath variables?
-The path variable is used to find the Java executable, while the classpath variable is used to find Java classes.
-
 What is the difference between an Interface and Abstract class?
- An interface is a collection of method signatures with no implementation.
-An abstract class can have both method signatures and implementation.
-
 Can you make an Object from an Interface and Abstract class ? if not how do you use it ?
-You cannot create an object from an interface or abstract class directly because they are incomplete classes.
-
 what is Access Specifier?
-An access specifier is a keyword used in Java to set the accessibility of classes, methods, and variables. There are four access specifiers in Java: public, private, protected, and default.
-
 What is OOP ? Define each feature of java OOP.
-OOP stands for Object-Oriented Programming. Java OOP has the following features:
-Abstraction: ability to hide implementation details and show only essential features of the object.
-Encapsulation: bundling of data and methods that operate on that data.
-Inheritance: creating a new class by inheriting properties of an existing class.
-Polymorphism: ability of an object to take on many forms.
-
 What is Java Package and which package is imported by default?
-A Java package has related classes, interfaces, and sub-packages.
-The package java.lang is imported by default.
-
 What is API? Name list of API that you have used so far.
-API stands for Application Programming Interface. we have used java collections API
-
 Does java support multiple inheritance, explain why or why not?
-No due to the diamond problem which is when 2 superclasses have a common method signature and the subclass does not know which superclass method to inherit.
-
 What is method overloading and when it happens?
- Method overloading is when we define two or more methods in a class with the same name but different parameters.
-It happens when methods have the same name but different argument lists.
-
 Explain exceptions in java and how to handle it.
 What is static keyword in java? How it has been used in variables and methods ?
 What is final and how it has been used variables and methods?

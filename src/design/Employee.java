@@ -23,4 +23,13 @@ public interface Employee {
 	//employee benefit
 	public void benefitLayout();
 
+	//employee age
+	public int age();
+
+	// employee job title
+	public String employeeJobTitle();
+
+	//calculate bonuses
+	public int calculatebonuses(int bonuses);
+
 }

@@ -9,6 +9,26 @@ public class UseQueue {
 		 * 
 		 */
 
+		Queue<String> queue = new LinkedList<>();
+		queue.add("Maz");
+		queue.add("Taseen");
+		queue.add("David");
+
+		System.out.println("Peek: " + queue.peek());
+
+		System.out.println("Remove: " + queue.remove());
+
+		System.out.println("Poll: " + queue.poll());
+
+		System.out.println("Elements in queue: ");
+		for (String name : queue) {
+			System.out.println(name);
+		}
+
+		System.out.println("Elements in queue using Iterator: ");
+		for (String s : queue) {
+			System.out.println(s);
+		}
 	}
 
 }
