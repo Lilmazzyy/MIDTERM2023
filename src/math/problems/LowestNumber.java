@@ -16,19 +16,33 @@ public class LowestNumber {
 
 		//find lowest number from the array
 
-		ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
-		List<String> lowestValue = new ArrayList<String>();
-		try {
-			connectToSqlDB.insertDataFromArrayToSqlTable(array, "tbl_lowestNumber", "column_lowestNumber");
-			lowestValue = connectToSqlDB.readDataBase("tbl_lowestNumber", "column_lowestNumber");
+		int lowestNumber = array[0];
+		for (int i = 1; i < array.length; i++) {
+			if (array[i] < lowestNumber) {
+				lowestNumber = array[i];
+			}
+		}
+		System.out.println("Lowest number in the array is: " + lowestNumber);
 
+		// save lowest number in database
+		ConnectToSqlDB connectToSqlDB = new ConnectToSqlDB();
+		try {
+			connectToSqlDB.createTableFromStringToMySql("tbl_lowestNumber", "column_lowestNumber");
+			connectToSqlDB.insertDataFromArrayToSqlTable(new int[]{lowestNumber}, "tbl_lowestNumber", "column_lowestNumber");
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		System.out.println("Data is reading from the Table (tbl_primenumber) and displaying to the console");
-		for(String st:lowestValue){
+
+		// retrieve the lowest number from database
+		List<String> lowestValue = new ArrayList<>();
+		try {
+			lowestValue = connectToSqlDB.readDataBase("tbl_lowestNumber", "column_lowestNumber");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		System.out.println("Data is reading from the Table (tbl_lowestNumber) and displaying to the console");
+		for (String st : lowestValue) {
 			System.out.println(st);
 		}
 	}
-
 }

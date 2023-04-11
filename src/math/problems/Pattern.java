@@ -8,7 +8,18 @@ public class Pattern {
 		 *
 		 *
 		 */
-		
+		int count = 0;
+		int dcrmnt = 1;
+
+		for (int i = 100; i >= 0; i -= dcrmnt) {
+			System.out.print(i + " ");
+			count++;
+
+			if (count == 10) {
+				dcrmnt++;
+				count = 0;
+			}
+		}
 
 
 	}
